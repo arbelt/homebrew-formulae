@@ -6,10 +6,11 @@ cask 'r' do
     url "https://cran.cnr.berkeley.edu/bin/macosx/R-#{version}-snowleopard.pkg"
     pkg "R-#{version}-snowleopard.pkg"
   else
-    version '3.3.1'
-    sha256 'ecef7e7ee7ee5a43076537b8ef7246e451d6170874e3036a46d5b807cdf7b8de'
+    version '3.3.2'
+    sha256 '10ee51682c963eea0d2c1a6e9185a3a03ada9c1a377e8406d02c490708b7b122'
     # cran.cnr.berkeley.edu was verified as official when first introduced to the cask
-    url "https://cran.cnr.berkeley.edu/bin/macosx/R-#{version}.pkg"
+    # url "https://cran.cnr.berkeley.edu/bin/macosx/R-#{version}.pkg"
+    url "https://cloud.r-project.org/bin/macosx/R-#{version}.pkg"
     pkg "R-#{version}.pkg"
   end
 
@@ -33,7 +34,7 @@ cask 'r' do
                        '/Library/Frameworks/R.Framework/Versions/Current',
                        # :pkgutil won't delete this dir if the fontconfig cache was written to at
                        # /Library/Frameworks/R.Framework/Versions/3.2/Resources/fontconfig/cache
-                       '/Library/Frameworks/R.Framework/Versions/3.2',
+                       '/Library/Frameworks/R.Framework/Versions/3.3',
                      ]
 
   zap       delete: [
