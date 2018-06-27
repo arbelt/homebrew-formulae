@@ -1,17 +1,17 @@
 cask 'mro-current' do
-  version '3.3.1'
-  sha256 'dd804948450bc68fb81ad2c06da97b5af90008374ed291fdfa7ca9c69a6f1272'
+  version '3.5.0'
+  sha256 '105551BC5E6D4D6E1B24D328D27CAE01C63FE0A357076BB2599C9BE40E296F3A'
 
-  url "https://mran.revolutionanalytics.com/install/mro/#{version}/microsoft-r-open-#{version}.pkg"
+  url "https://mran.blob.core.windows.net/install/mro/#{version}/microsoft-r-open-#{version}.pkg"
   name 'Microsoft R Open'
   name 'MRO'
   homepage 'https://mran.revolutionanalytics.com'
-  license :gpl
 
   pkg "microsoft-r-open-#{version}.pkg"
 
   uninstall pkgutil: [
-                       'com.microsoft.pkg.untitled_package',
+                       'com.microsoft.pkg.mro-gui',
+                       'com.microsoft.pkg.mro-framework',
                        'com.microsoft.rservices.mro2',
                        'com.microsoft.rservices.mro1',
                      ],
@@ -19,7 +19,7 @@ cask 'mro-current' do
                        '/usr/bin/R',
                        '/usr/bin/Rscript',
                        '/Library/Frameworks/R.Framework/Versions/Current',
-                       '/Library/Frameworks/R.Framework/Versions/3.2',
+                       '/Library/Frameworks/R.Framework/Versions/3.5.0',
                      ]
 
   zap       delete: [
