@@ -10,7 +10,7 @@ class PandocAT27 < Formula
   head "https://github.com/jgm/pandoc.git"
 
   bottle do
-    root_url "https://dl.bintray.com/arbelt/bottles-homebrew"
+    root_url "https://dl.bintray.com/arbelt/bottles-formulae"
     rebuild 1
     sha256 "58e1e800795360dea408e0919c7e1be3efa693e81463cd2d48761ea33d7042a6" => :catalina
   end
