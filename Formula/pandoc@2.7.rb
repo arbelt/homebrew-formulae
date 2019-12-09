@@ -11,7 +11,8 @@ class PandocAT27 < Formula
 
   bottle do
     root_url "https://dl.bintray.com/arbelt/bottles-homebrew"
-    sha256 "ce8d394f91c074cf8e5a4b0284137fe98cfd0c959690de254820b45931b8e079" => :catalina
+    rebuild 1
+    sha256 "58e1e800795360dea408e0919c7e1be3efa693e81463cd2d48761ea33d7042a6" => :catalina
   end
 
   depends_on "cabal-install" => :build
