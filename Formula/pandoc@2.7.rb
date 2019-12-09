@@ -1,6 +1,6 @@
 require "language/haskell"
 
-class PandocAT273 < Formula
+class PandocAT27 < Formula
   include Language::Haskell::Cabal
 
   desc "Swiss-army knife of markup format conversion"
@@ -10,9 +10,8 @@ class PandocAT273 < Formula
   head "https://github.com/jgm/pandoc.git"
 
   bottle do
-    sha256 "bb4246119de8f6f8769d4a7baf3127ed66df0edd69bb84c92b1bdeaa90064caf" => :mojave
-    sha256 "afe8cc21378449f87f55d10a36282018038e8ad9240b2c10cae28586760ea2e1" => :high_sierra
-    sha256 "3e738f0e5e5ea97b918c0f123de502119b8ca000654c4b67831e4af7998f394a" => :sierra
+    root_url "https://dl.bintray.com/arbelt/bottles-homebrew"
+    sha256 "ce8d394f91c074cf8e5a4b0284137fe98cfd0c959690de254820b45931b8e079" => :catalina
   end
 
   depends_on "cabal-install" => :build
